@@ -1,0 +1,35 @@
+<div class ="jumbotron py-5 bg-dark">
+    <h1 class="display-4 text-center text-secondary">Task Manager</h1>
+    <p class="lead text-center text-secondary">Aplikacja typu SPA, zarządzająca listą zadań</p>
+</div>
+
+<div class="row py-5">
+    <div class="col-md-6 px-5">
+        <table class="table table-striped">
+            <thead class="thead-light">
+                <tr>
+                    <th></th>
+                    <th>Zadanie</th>
+                    <th>Opis zadania</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pd of service.list">
+                    <td><i class="fas fa-calendar-check fa-lg text-success" (click)="onDelete(pd.taskId)"></i></td>
+                    <td (click)="populateForm(pd)">{{pd.taskName}}</td>
+                    <td (click)="populateForm(pd)">{{pd.description}}</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6 px-5">
+        <app-task-detail-form></app-task-detail-form>
+    </div>
+</div>
+<div class ="jumbotron py-5 bg-dark">
+    <h1 class="display-6 text-center text-secondary">Zadanie na potrzeby rekrutacji</h1>
+    <p class="lead text-center text-secondary">made by Michał Kikoła</p>
+</div>
+
+

@@ -1,0 +1,29 @@
+html, body {
+
+    margin: 0;
+    padding:0;
+  }
+
+#head
+{
+    width:100%;
+}
+.container 
+{
+    margin-right: auto;
+    margin-left: auto;
+    width:100%;
+    padding:0;
+    max-width: '100%';
+    min-width: '100%';
+}
+
+input.invalid
+{
+    border-color:red;
+}
+
+table tbody tr:hover {
+    background-color: #abc4f3;
+    cursor: pointer;
+  }
